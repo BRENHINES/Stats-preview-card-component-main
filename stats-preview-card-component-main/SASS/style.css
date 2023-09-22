@@ -208,6 +208,7 @@ main {
 @media screen and (min-width: 90rem) {
   .Card__Stat {
     gap: 0.9375rem;
+    text-align: start;
   }
 }
 .Card__Stat--Number {
