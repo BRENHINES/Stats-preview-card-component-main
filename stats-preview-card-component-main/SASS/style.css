@@ -38,7 +38,9 @@ a,
 button {
   border: none;
   outline: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 
@@ -47,6 +49,22 @@ video {
   display: block;
   width: 100%;
   height: auto;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--clr-primary-Very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 :root {
@@ -59,4 +77,84 @@ video {
   --spc-margin-25: 25px;
   --spc-border-10: 10px;
   --spc-border-17: 17px;
+}
+
+.Card {
+  min-width: 350px;
+  max-width: 450px;
+  min-height: 635px;
+  max-height: 735px;
+  background: var(--clr-primary-Dark-desaturated-blue);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+@media screen and (min-width: 1440px) {
+  .Card {
+    min-width: 1080px;
+    max-width: 1180px;
+    flex-direction: row;
+  }
+}
+.Card__Hero {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1440px) {
+  .Card__Hero {
+    background: url("/stats-preview-card-component-main/images/image-header-desktop.jpg") no-repeat;
+    height: 735px;
+    background-size: contain;
+    width: 100%;
+    order: 1;
+  }
+}
+.Card__Hero img {
+  border-radius: 10px 10px 0px 0px;
+}
+@media screen and (min-width: 1440px) {
+  .Card__Hero img {
+    opacity: 0;
+  }
+}
+.Card__Content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.Card__Title {
+  font-size: 26px;
+  color: var(--clr-neutral-White);
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+.Card__Title span {
+  color: var(--clr-primary-Soft-violet);
+}
+.Card p {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  color: var(--clr-neutral-Slightly-transparent-white-paragraph);
+  text-align: center;
+}
+.Card__StatsFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.Card__Stat--Number {
+  font-weight: 700;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: var(--clr-neutral-Slightly-transparent-white-headings);
+}
+.Card__Stat--Name {
+  text-transform: uppercase;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

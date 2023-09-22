@@ -5,26 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./SASS/style.css">
   
   <title>Frontend Mentor | Stats preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; color: white; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  <main class="Card__Container">
-    <section class="Card__Wrapper">
+  <main>
+    <section class="Card">
       <div class="Card__Hero">
-        <picture>
-          <source srcset="./images/image-header-desktop.jpg" media="(min-width: 1440px)">
+        <div class="Card__Hero--Overlay">
           <img src="./images/image-header-mobile.jpg" alt="Mobile picture">
-        </picture>
+        </div>
       </div>
-
       <div class="Card__Content">
         <h1 class="Card__Title">
           Get <span>insights</span> that help your business grow.
@@ -33,7 +33,7 @@
           Discover the benefits of data analytics and make better decisions regarding revenue, customer 
   experience, and overall efficiency.
         </p>
-        <div class="Card__StatsGrid">
+        <div class="Card__StatsFlex">
           <div class="Card__Stat">
             <h3 class="Card__Stat--Number">
               10k+

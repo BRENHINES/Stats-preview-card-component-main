@@ -40,3 +40,20 @@ video {
     width: 100%;
     height: auto;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--clr-primary-Very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
